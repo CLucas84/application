@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kushki Test Cl_2023</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<script src="https://cdn.kushkipagos.com/kushki-checkout.js"></script>
+<link rel="icon" href="https://cdn-uat.kushkipagos.com/favicon.ico"
+	type="image/jpg" />
+</head>
+<body>
+	<form id="kushki-pay-form" action="confirm" method="post">
+		<input type="hidden" name="cart_id" value="123">
+	</form>	
+
+	<script type="text/javascript">
+		var kushki = new KushkiCheckout({
+		kformId: "7JEYeAZ3U",
+		form: "kushki-pay-form",
+		publicMerchantId: "46f07220d6bf47ae9c05dcd328c6e036",// Reemplaza esto por tucredencial pública
+		payment_methods : [ "credit-card" ],
+		is_subscription : true,
+		inTestEnvironment: true,
+		amount: {
+		subtotalIva: 22,
+		iva: 2.46,
+		subtotalIva0: 19.54,
+		}
+		});
+	</script>
+</body>
+</html>
